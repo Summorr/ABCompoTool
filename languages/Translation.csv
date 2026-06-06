@@ -1,0 +1,33 @@
+﻿,en,zh
+Sprites,Sprites,图块
+Add to ImageSet,Add to ImageSet,添加到分图组
+ImageSet,ImageSet,分图组
+CompoGroup,CompoGroup,拼图组
+"Import
+PNG","Import
+PNG",导入图片
+"Import
+XML","Import
+XML",导入XML
+"Import
+Compo","Import
+Compo",导入拼图
+Export CompoSprite,Export CompoSprite,导出拼图
+Settings,Settings,设置
+Language,Language,语言
+Close,Close,关闭
+Help,Help,帮助
+text_help,"1.Import .png
+2.Convert .dat to .xml by KA3DConvert
+3.Import xml(not for composprites)
+4.Add your sprites to imageset
+5.Import xml of composprites
+6.Select one in compogroup and you can export it","1.导入 .png
+2.转换 .dat 为 .xml 通过 KA3DConvert
+3.导入 xml(不是给composprites用的)
+4.把图块添加至分图组
+5.导入composprites的xml
+6.选择compogroup中的一个然后你就能导出了"
+Developed by Summor/HKPenguin,Developed by Summor/HKPenguin,由 夏沫/航空企鹅 开发
+Get KA3DConvert by GZHYBFHHJ,Get KA3DConvert by GZHYBFHHJ,获取 牢封 的KA3DConvert
+Usage Example,Usage Example,使用范例
