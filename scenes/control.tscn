@@ -1,0 +1,336 @@
+[gd_scene format=3 uid="uid://cxlp4i053hr12"]
+
+[ext_resource type="Script" uid="uid://riju2deqkf03" path="res://scripts/control.gd" id="1_r67kn"]
+[ext_resource type="Texture2D" uid="uid://d2msnxjr48kvd" path="res://icon.svg" id="2_brbbq"]
+[ext_resource type="Texture2D" uid="uid://b5ijucbtw41gu" path="res://images/icon-1.svg" id="3_brbbq"]
+
+[node name="Control" type="Control" unique_id=776018363 node_paths=PackedStringArray("svs")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r67kn")
+svs = NodePath("SubViewportContainer/SubViewport")
+
+[node name="compo" type="Control" parent="." unique_id=1221723085]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1424018767]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 68.0
+offset_right = 807.0
+offset_bottom = 580.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=495407214]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="imgsel" type="FileDialog" parent="." unique_id=943563190]
+oversampling_override = 1.0
+title = "Open a File"
+position = Vector2i(0, 36)
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png")
+use_native_dialog = true
+
+[node name="xmlsel" type="FileDialog" parent="." unique_id=1073767336]
+oversampling_override = 1.0
+title = "Open a File"
+position = Vector2i(0, 36)
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.xml")
+use_native_dialog = true
+
+[node name="comsel" type="FileDialog" parent="." unique_id=2009886979]
+title = "Open a File"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.xml")
+use_native_dialog = true
+
+[node name="savecom" type="FileDialog" parent="." unique_id=268095654]
+access = 2
+filters = PackedStringArray("*.png")
+use_native_dialog = true
+
+[node name="ui" type="Control" parent="." unique_id=1004255507]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="sprite" type="Sprite2D" parent="ui" unique_id=541579159]
+position = Vector2(550, 312)
+texture = ExtResource("2_brbbq")
+
+[node name="inimg" type="Button" parent="ui" unique_id=1194367791]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 224.0
+offset_top = 485.0
+offset_right = 416.0
+offset_bottom = 592.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 36
+text = "Import
+PNG"
+
+[node name="inxml" type="Button" parent="ui" unique_id=1680017879]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 445.0
+offset_top = 485.0
+offset_right = 637.0
+offset_bottom = 592.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 36
+text = "Import
+XML"
+
+[node name="incom" type="Button" parent="ui" unique_id=1130592177]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 669.0
+offset_top = 484.0
+offset_right = 861.0
+offset_bottom = 592.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 36
+text = "Import
+Compo"
+
+[node name="add2group" type="Button" parent="ui" unique_id=115150244]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 583.0
+offset_right = 221.0
+offset_bottom = 637.0
+text = "Add to ImageSet"
+
+[node name="sprlst" type="ItemList" parent="ui" unique_id=648825263]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 136.0
+offset_right = 223.0
+offset_bottom = 577.0
+
+[node name="grouplst" type="ItemList" parent="ui" unique_id=96106963]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 117.0
+offset_right = 1130.0
+offset_bottom = 349.0
+
+[node name="comlst" type="ItemList" parent="ui" unique_id=1786404608]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 389.0
+offset_right = 1130.0
+offset_bottom = 621.0
+
+[node name="label" type="Label" parent="ui" unique_id=1468377316]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 91.0
+offset_right = 113.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 32
+text = "Sprites"
+
+[node name="label2" type="Label" parent="ui" unique_id=2143792728]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 72.0
+offset_right = 1008.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 32
+text = "ImageSet"
+
+[node name="label3" type="Label" parent="ui" unique_id=1700049065]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 344.0
+offset_right = 1008.0
+offset_bottom = 389.0
+theme_override_font_sizes/font_size = 32
+text = "CompoGroup"
+
+[node name="exportcom" type="Button" parent="ui" unique_id=1543325209]
+layout_mode = 0
+offset_left = 689.0
+offset_top = 479.0
+offset_right = 879.0
+offset_bottom = 519.0
+text = "Export CompoSprite"
+
+[node name="Settings" type="Button" parent="ui" unique_id=979194173]
+layout_mode = 0
+offset_left = 905.0
+offset_top = 8.0
+offset_right = 1145.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 32
+text = "Settings"
+
+[node name="analy" type="RichTextLabel" parent="ui" unique_id=379355210]
+layout_mode = 0
+offset_right = 294.0
+offset_bottom = 344.0
+mouse_filter = 2
+bbcode_enabled = true
+
+[node name="settings" type="Control" parent="." unique_id=1304038695]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="settings" unique_id=1155004829]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -257.0
+offset_top = -194.0
+offset_right = 1358.0
+offset_bottom = 714.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon1" type="Sprite2D" parent="settings/Panel" unique_id=98069724]
+position = Vector2(363, 715)
+texture = ExtResource("3_brbbq")
+
+[node name="title" type="Label" parent="settings/Panel" unique_id=2075218420]
+layout_mode = 0
+offset_left = 595.0
+offset_top = 199.0
+offset_right = 976.0
+offset_bottom = 287.0
+theme_override_font_sizes/font_size = 64
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="LangOption" type="OptionButton" parent="settings/Panel" unique_id=863843767]
+layout_mode = 0
+offset_left = 932.0
+offset_top = 287.0
+offset_right = 1092.0
+offset_bottom = 340.0
+theme_override_font_sizes/font_size = 32
+item_count = 2
+popup/item_0/text = "简体中文"
+popup/item_0/id = 0
+popup/item_1/text = "English"
+popup/item_1/id = 1
+
+[node name="Language" type="Label" parent="settings/Panel" unique_id=939962194]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 288.0
+offset_right = 631.0
+offset_bottom = 333.0
+theme_override_font_sizes/font_size = 32
+text = "Language"
+
+[node name="Xset" type="Button" parent="settings/Panel" unique_id=1142686007]
+layout_mode = 0
+offset_left = 923.0
+offset_top = 533.0
+offset_right = 1116.0
+offset_bottom = 621.0
+theme_override_font_sizes/font_size = 32
+text = "Close"
+
+[node name="Help" type="Label" parent="settings/Panel" unique_id=391069890]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 340.0
+offset_right = 553.0
+offset_bottom = 385.0
+theme_override_font_sizes/font_size = 32
+text = "Help"
+
+[node name="Help2" type="RichTextLabel" parent="settings/Panel" unique_id=321170015]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 379.0
+offset_right = 1105.0
+offset_bottom = 516.0
+text = "text_help"
+
+[node name="LinkButton" type="LinkButton" parent="settings/Panel" unique_id=362710955]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 522.0
+offset_right = 752.0
+offset_bottom = 562.0
+text = "Developed by Summor/HKPenguin"
+uri = "https://github.com/Summorr"
+
+[node name="LinkButton2" type="LinkButton" parent="settings/Panel" unique_id=780193039]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 563.0
+offset_right = 752.0
+offset_bottom = 603.0
+text = "Get KA3DConvert by GZHYBFHHJ"
+uri = "https://github.com/GZHYBFHHJ/KA3DConvert"
+
+[node name="LinkButton3" type="LinkButton" parent="settings/Panel" unique_id=1340698144]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 603.0
+offset_right = 752.0
+offset_bottom = 643.0
+text = "Usage Example"
+uri = "https://www.bilibili.com/video/BV1KKEJ61E6i/"
+
+[node name="versionlabel" type="LinkButton" parent="settings/Panel" unique_id=1339081530]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 635.0
+offset_right = 631.0
+offset_bottom = 680.0
+text = "v1.0.1"
+uri = "https://github.com/Summorr/ABCompoTool"
+
+[connection signal="file_selected" from="imgsel" to="." method="png_selected"]
+[connection signal="file_selected" from="xmlsel" to="." method="xml_selected"]
+[connection signal="file_selected" from="comsel" to="." method="_on_comsel_file_selected"]
+[connection signal="pressed" from="ui/inimg" to="." method="_on_inimg_pressed"]
+[connection signal="pressed" from="ui/inxml" to="." method="_on_inxml_pressed"]
+[connection signal="pressed" from="ui/incom" to="." method="_on_incom_pressed"]
+[connection signal="pressed" from="ui/add2group" to="." method="_on_add_2_group_pressed"]
+[connection signal="item_selected" from="ui/sprlst" to="." method="_on_sprlst_spr_selected"]
+[connection signal="item_selected" from="ui/grouplst" to="." method="_on_grouplst_item_selected"]
+[connection signal="item_selected" from="ui/comlst" to="." method="_on_comlst_com_selected"]
+[connection signal="pressed" from="ui/exportcom" to="." method="_on_exportcom_pressed"]
+[connection signal="pressed" from="ui/Settings" to="." method="_on_settings_pressed"]
+[connection signal="item_selected" from="settings/Panel/LangOption" to="." method="_on_lang_option_item_selected"]
+[connection signal="pressed" from="settings/Panel/Xset" to="." method="_on_xset_pressed"]
